@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:git_hub/secpnd_Page.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -12,13 +13,18 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Container(
-          height: 200,
-          width: 200,
-          decoration: BoxDecoration(
-            color: Colors.red,
-            borderRadius: BorderRadius.circular(20),
+      body: InkWell(
+        onTap: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context) => SecondPage(),));
+        },
+        child: Center(
+          child: Container(
+            height: 200,
+            width: 200,
+            decoration: BoxDecoration(
+              color: Colors.red,
+              borderRadius: BorderRadius.circular(20),
+            ),
           ),
         ),
       ),
